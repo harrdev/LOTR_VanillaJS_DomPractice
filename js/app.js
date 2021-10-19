@@ -13,6 +13,8 @@ const buddies = ['Gandalf the Grey', 'Legolas', 'Gimli', 'Strider', 'Boromir']
 const baddies = ['Sauron', 'Saruman', 'The Uruk-hai', 'Orcs']
 
 const lands = ['The-Shire', 'Rivendell', 'Mordor']
+const ulHobbits = document.createElement("ul");
+	ulHobbits.id = "hobbits";
 
 // ============
 // Chapter 1
@@ -55,8 +57,7 @@ function makeHobbits() {
 	// hint: get 'The-Shire' by using its id
 	const theShire = document.getElementById('The-Shire');
 	// give each hobbit a class of `hobbit`
-	const ulHobbits = document.createElement("ul");
-	ulHobbits.id = "hobbits";
+	
 	// display an `unordered list` of hobbits in the shire
 	// hint: create a 'ul' outside the loop into which to append the 'li's
 	for (let i = 0; i < hobbits.length; i++) {
@@ -161,7 +162,7 @@ function makeBuddies() {
 
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
-
+	Rivendell.appendChild(ulHobbits);
 	// assemble the `hobbits` and move them to `rivendell`
 }
 
