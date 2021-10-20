@@ -205,13 +205,13 @@ function forgeTheFellowShip() {
 		const liFellowship = document.createElement("li");
 		liFellowship.textContent = hobbits[i];
 		ulFellowship.appendChild(liFellowship);
-		alert(`${hobbits[i]} has joined your party.`);
+		//alert(`${hobbits[i]} has joined your party.`);
 	}
 	for (let i = 0; i < buddies.length; i++) {
 		const liBuddies = document.createElement("li");
 		liBuddies.textContent = buddies[i];
 		ulFellowship.appendChild(liBuddies);
-		alert(`${buddies[i]} has joined your party.`);
+		//alert(`${buddies[i]} has joined your party.`);
 	}
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
@@ -226,6 +226,8 @@ function forgeTheFellowShip() {
 function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
+	const gandalf = document.getElementById("Gandalf the Grey");
+	gandalf.textContent = "Gandalf the White";
 	// apply the following style to the element, make the // background 'white', add a grey border
 }
 
