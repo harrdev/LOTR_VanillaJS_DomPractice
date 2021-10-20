@@ -16,6 +16,8 @@ const lands = ['The-Shire', 'Rivendell', 'Mordor']
 const ulHobbits = document.createElement("ul");
 	ulHobbits.id = "hobbits";
 
+buddies[3].id = "Strider";
+
 // ============
 // Chapter 1
 // ============
@@ -140,8 +142,10 @@ function makeBuddies() {
 	const aside = document.createElement("aside");
 	// put an `unordered list` of the `'buddies'` in the aside
 	const ulBuddies = document.createElement("ul");
-	for (let i = 0; i < buddies.length; i++) {
+	ulBuddies.id = "buddies";
+	for (let i = 0; i < buddies.length; i++) { 
 		const liBuddies = document.createElement("li");
+		liBuddies.id = buddies[i];
 		console.log(liBuddies);
 		liBuddies.textContent = buddies[i];
 		ulBuddies.appendChild(liBuddies);
@@ -175,7 +179,8 @@ function leaveTheShire() {
 
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
-
+	const aragorn = document.getElementById("Strider");
+	aragorn.textContent = "Aragorn";
 	// change the `'Strider'` text to `'Aragorn'`
 }
 
