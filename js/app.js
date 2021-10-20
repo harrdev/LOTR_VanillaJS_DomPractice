@@ -14,8 +14,8 @@ const baddies = ['Sauron', 'Saruman', 'The Uruk-hai', 'Orcs']
 
 const lands = ['The-Shire', 'Rivendell', 'Mordor']
 const ulHobbits = document.createElement("ul");
-	ulHobbits.id = "hobbits";
 
+ulHobbits.id = "hobbits";
 buddies[3].id = "Strider";
 
 // ============
@@ -194,9 +194,25 @@ function beautifulStranger() {
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
 	// create a new div called `'the-fellowship'` within `rivendell`
+	const fellowship = document.createElement("div");
+	fellowship.className = "the-fellowship";
+	Rivendell.appendChild(fellowship);
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
-	// after each character is added make an alert that they // have joined your party
-
+	const ulFellowship = document.createElement("ul");
+	ulFellowship.className = "fellowsList";
+	// after each character is added make an alert that they have joined your party
+	for (let i = 0; i < hobbits.length; i++) {
+		const liFellowship = document.createElement("li");
+		liFellowship.textContent = hobbits[i];
+		ulFellowship.appendChild(liFellowship);
+		alert(`${hobbits[i]} has joined your party.`);
+	}
+	for (let i = 0; i < buddies.length; i++) {
+		const liBuddies = document.createElement("li");
+		liBuddies.textContent = buddies[i];
+		ulFellowship.appendChild(liBuddies);
+		alert(`${buddies[i]} has joined your party.`);
+	}
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
 
